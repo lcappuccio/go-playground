@@ -6,9 +6,13 @@ import (
 	"math/rand"
 )
 
+func getRandom() int {
+	rand.Seed(time.Now().UTC().UnixNano())
+	return rand.Intn(10)
+}
+
 func main() {
 	fmt.Println("Hello Go!")
 	fmt.Println("The time is", time.Now())
-	rand.Seed(time.Now().UTC().UnixNano())
-	fmt.Println("My favorite number is", rand.Intn(10))
+	fmt.Println("My favorite number is", getRandom())
 }
