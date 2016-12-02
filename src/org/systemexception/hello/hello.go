@@ -37,4 +37,10 @@ func main() {
 		sum += i
 	}
 	fmt.Println("Total: ", sum)
+
+	// But the for becomes a while
+	for sum < 1000 {
+		sum += sum
+	}
+	fmt.Println("Adding more: ", sum)
 }
