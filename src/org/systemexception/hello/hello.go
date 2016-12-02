@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 	"math/rand"
+	"math"
 )
 
 func getRandom() int {
@@ -22,4 +23,10 @@ func main() {
 
 	firstString, secondString := swapStrings("Swap", "strings")
 	fmt.Println("Swap strings: ", firstString, secondString)
+
+	// Value conversions
+	var myInt int = 42
+	var myFloat float32 = float32(myInt) + math.Pi
+	var myNewInt int = int(myFloat)
+	fmt.Println(myInt, myFloat, myNewInt)
 }
