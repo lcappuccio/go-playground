@@ -29,4 +29,12 @@ func main() {
 	var myFloat float32 = float32(myInt) + math.Pi
 	var myNewInt int = int(myFloat)
 	fmt.Println(myInt, myFloat, myNewInt)
+
+	// For loop (only loop in go!)
+	sum := 0
+	for i := 0; i < 10; i++ {
+		fmt.Println(i, sum)
+		sum += i
+	}
+	fmt.Println("Total: ", sum)
 }
