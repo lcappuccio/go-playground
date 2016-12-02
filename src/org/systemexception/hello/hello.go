@@ -43,4 +43,9 @@ func main() {
 		sum += sum
 	}
 	fmt.Println("Adding more: ", sum)
+
+	// An interesting variation
+	for getRandom() < 5 {
+		fmt.Println("Random is lesser than 5")
+	}
 }
