@@ -7,6 +7,13 @@ import (
 	"math"
 )
 
+// define a struc (record in C)
+type Vertex struct {
+
+	xCoordinate int
+	yCoordinate int
+}
+
 func getRandom() int {
 	rand.Seed(time.Now().UTC().UnixNano())
 	return rand.Intn(10)
@@ -22,7 +29,7 @@ func main() {
 	fmt.Println("My random  number is", getRandom())
 
 	firstString, secondString := swapStrings("Swap", "strings")
-	fmt.Println("Swap strings: ", firstString, secondString)
+	fmt.Println("Swap strings:", firstString, secondString)
 
 	// Value conversions
 	var myInt int = 42
@@ -36,16 +43,20 @@ func main() {
 		fmt.Println(i, sum)
 		sum += i
 	}
-	fmt.Println("Total: ", sum)
+	fmt.Println("Total:", sum)
 
 	// But the for becomes a while
 	for sum < 1000 {
 		sum += sum
 	}
-	fmt.Println("Adding more: ", sum)
+	fmt.Println("Adding more:", sum)
 
 	// An interesting variation
 	for getRandom() < 5 {
 		fmt.Println("Random is lesser than 5")
 	}
+
+	// Declare a struc
+	var myVertex = Vertex{0,0}
+	fmt.Println("Vertex is", myVertex)
 }
