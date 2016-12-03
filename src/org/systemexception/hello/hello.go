@@ -57,6 +57,9 @@ func main() {
 	}
 
 	// Declare a struc
-	var myVertex = Vertex{0,0}
+	var myVertex = Vertex{getRandom(),getRandom()}
 	fmt.Println("Vertex is", myVertex)
+	// And access its' fields
+	fmt.Println("X coordinate is", myVertex.xCoordinate)
+	fmt.Println("Y coordinate is", myVertex.yCoordinate)
 }
