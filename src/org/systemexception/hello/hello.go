@@ -19,7 +19,7 @@ func swapStrings(firstString, secondString string) (string, string) {
 func main() {
 	fmt.Println("Hello Go!")
 	fmt.Println("The time is", time.Now())
-	fmt.Println("My favorite number is", getRandom())
+	fmt.Println("My random number is", getRandom())
 
 	firstString, secondString := swapStrings("Swap", "strings")
 	fmt.Println("Swap strings: ", firstString, secondString)
